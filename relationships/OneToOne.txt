@@ -23,6 +23,10 @@ Phone
 create Phone model, migration, factory and seeder files
 $ php artisan make:model Phone -mfs
 
+edit phone model with mass assignment
+
+edit the migration file with additional fields
+
 migrate all the files
 php artisan migrate:fresh
 
