@@ -4,7 +4,7 @@ A one-to-one relationship is a very basic type of database relationship. A User 
 User 
 User Model and the migration files are already exist
 
-1) Migrate fresh to create the user table
+Migrate fresh to create the user table
 php artisan migrate:fresh 
 
 Now add fake users to the table
@@ -17,3 +17,27 @@ in run() add 'User::factory()->count(3)->create();'
 
 - seed into the table
 php artisan db:seed --class=UserTableSeeder
+
+-----------------------------------------------------------------------------
+Phone
+create Phone model, migration, factory and seeder files
+$ php artisan make:model Phone -mfs
+
+migrate all the files
+php artisan migrate:fresh
+
+phone factory
+- create faker custom array of phone names and let Laravel pick names randomly
+  when creating records
+
+seeder
+- create records
+
+seeding - this can be done is two ways
+1 - 
+    Edit DatabaseSeeder run() as in example
+    php artisan db:seed
+
+2 - 
+    Edit PhoneSeeder run()
+    php artisan db:seed --class=PhoneSeeder
