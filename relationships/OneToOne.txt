@@ -1,0 +1,19 @@
+One to One
+A one-to-one relationship is a very basic type of database relationship. A User has ONE phone. The Phone is BELONGSTO a user.
+
+User 
+User Model and the migration files are already exist
+
+1) Migrate fresh to create the user table
+php artisan migrate:fresh 
+
+Now add fake users to the table
+- make the factory files - factory sets the rules for the table fields
+php artisan make:factory UserFactory --model=User
+
+- make the UserTableSeeder
+php artisan make:seed UserTableSeeder
+in run() add 'User::factory()->count(3)->create();'
+
+- seed into the table
+php artisan db:seed --class=UserTableSeeder
