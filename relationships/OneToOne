@@ -1,0 +1,2 @@
+One to One
+A one-to-one relationship is a very basic type of database relationship. A User has ONE phone. The Phone is BELONGSTO a user.
