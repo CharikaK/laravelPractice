@@ -45,3 +45,8 @@ seeding - this can be done is two ways
 2 - 
     Edit PhoneSeeder run()
     php artisan db:seed --class=PhoneSeeder
+
+-----------------------------------------------------------------------------
+View all the users
+Refer Web.php
+Refer index.blade.php
