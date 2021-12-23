@@ -50,3 +50,25 @@ seeding - this can be done is two ways
 View all the users
 Refer Web.php
 Refer index.blade.php
+
+-----------------------------------------------------------------------------
+Inserting fake data into tables.
+Relationship
+   - Phone table has a FK user_id. This is to create the relationship between user and the phone tables.
+   - when inserting data to phone table Laravel has to get user_id to build the relationship
+
+Foreign Key in PhoneFactory
+  - PhoneFactory must have rules defined when running the PhoneSeeder.
+  - Refer PhoneFactory definition() to find ' 'user_id'=>\App\Models\User::factory()->create()->id // Relationship maintenance'
+
+Seeding both tables with fake data
+php artisan migrate:fresh - Remove all data 
+php artisan db:seed - insert new records to both. Running DatabaseSeeder
+
+OR
+
+Seeding just the phone pulling existing user data
+php artisan db:seed --class=PhoneSeeder
+
+OR
+Refer Web.php Route::get('/phone') for manual insert

@@ -19,3 +19,11 @@ Route::get('/user',function(){
 $users = User::all();
 return view('index',compact('users'));
 });
+
+Route::get('/phone',function(){
+// Manually inserting data into Phone
+\App\Models\Phone::create([
+    'user_id'=>5,
+    'name'=>'blackberry'
+]);
+});
