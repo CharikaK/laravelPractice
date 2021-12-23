@@ -84,3 +84,7 @@ user() - return $this->belongsTo(User::class,'id','id');
 Web.php - $users = User::all();
 
 index.blade.php - <p>{{ $user->phone['name']}}</p>
+-----------------------------------------------------------------------------
+Eager Loading
+Reduces the number of queries run
+$users = User::with('phone')->get();
