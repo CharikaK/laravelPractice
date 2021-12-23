@@ -16,7 +16,9 @@ use App\Models\User; // another way of creating the fake users - Not recommended
 
 Route::get('/user',function(){
 // User::factory()->count(2)->create(); // another way of creating the fake users - Not recommended
-$users = User::all();
+//$users = User::all();
+$users = User::with('phone')->get();
+
 return view('index',compact('users'));
 });
 

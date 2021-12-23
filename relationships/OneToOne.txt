@@ -72,3 +72,15 @@ php artisan db:seed --class=PhoneSeeder
 
 OR
 Refer Web.php Route::get('/phone') for manual insert
+-----------------------------------------------------------------------------
+Defining the Relationship
+
+User.php
+phone() - return $this->hasOne(Phone::class,'user_id','id');
+
+Phone.php
+user() - return $this->belongsTo(User::class,'id','id');
+
+Web.php - $users = User::all();
+
+index.blade.php - <p>{{ $user->phone['name']}}</p>

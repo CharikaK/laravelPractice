@@ -21,12 +21,13 @@
         </style>
     </head>
     <body class="antialiased">
-        <div class="card" style="width: 18rem;">
+        <div class="card" style="width: 25rem;">
             
             <div class="card-body">
               <h5 class="card-title">User</h5>
                 @foreach($users as $user)
-                <p>{{ $user->name }}</p>
+                <h2>{{ $user->id }} - {{ $user->name }}</h2>
+                <p>{{ $user->phone['name']}}</p>
                 @endforeach             
               
             </div>
