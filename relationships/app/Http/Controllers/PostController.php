@@ -23,7 +23,7 @@ class PostController extends Controller
         $post = Post::find($id);
 
         $comment = new Comment();
-        $comment->comment="First Comment for Post $id"; // field comment
+        $comment->comment="Second Comment for Post $id"; // field comment
 
         // saving post_id        
         // Method 01 
@@ -33,5 +33,12 @@ class PostController extends Controller
         // Method 02 - inserting the post id and saving 
         $post->comments()->save($comment); // field post_id
         return "Comment has been posted";    
+    }
+
+    public function getCommentsByPost($postid)
+    {
+        $comments = Post::find($postid); // return only one comment
+        $comments = Post::find($postid)->comments; // return all related comments
+        return $comments;
     }
 }

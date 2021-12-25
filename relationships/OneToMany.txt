@@ -30,6 +30,10 @@ web.php
 - Route to addPost
 - Route to addComment
 
+-----------------------------------------------------------------------------
+Getting Comments
 
+PostController
+- Method to getComments
 
 
