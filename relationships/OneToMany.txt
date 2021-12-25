@@ -19,6 +19,17 @@ Migrate
 - php artisan migrate
 
 -----------------------------------------------------------------------------
+Creating controlelrs
+php artisan make:controller PostController
+
+PostController
+- Method to addPost
+- Method to addComment
+
+web.php
+- Route to addPost
+- Route to addComment
+
 
 
 

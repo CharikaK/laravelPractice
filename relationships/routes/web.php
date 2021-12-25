@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Models\User; // another way of creating the fake users - Not recommended
 
+use App\Http\Controllers\PostController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -38,3 +40,7 @@ Route::get('/phone',function(){
     'name'=>'blackberry'
 ]);
 });
+
+// One to Many
+Route::get('/add-post',[PostController::class,'addPost']);
+Route::get('/add-comment/{id}',[PostController::class,'addComment']);
