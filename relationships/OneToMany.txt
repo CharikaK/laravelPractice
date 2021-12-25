@@ -1,0 +1,24 @@
+One to Many
+One Post hasMany Comments
+One comment belongsTo one post
+
+-----------------------------------------------------------------------------
+Creating Models amd Migrations
+
+Create Post Model and the migration 
+- php artisan make:model Post -m
+
+Create Comment model and the migration
+- php artisan make:model Comment -m
+
+Edit migrations with column names
+
+Create relationship methods in both Models
+
+Migrate
+- php artisan migrate
+
+-----------------------------------------------------------------------------
+
+
+
