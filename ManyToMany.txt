@@ -47,3 +47,8 @@ Many to many relationships use attach() to attach the related model
 Web
 Create Routes to addGroups and addUsers
 ----------------------------------------------------------------
+Fetching data
+
+GroupController
+- getAllRolesByUser()
+- getAllUsersByRoles()

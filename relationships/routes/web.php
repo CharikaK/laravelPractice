@@ -51,3 +51,5 @@ Route::get('/getCommentsByPost/{id}',[PostController::class,'getCommentsByPost']
 // many to many
 Route::get('/add-roles',[GroupController::class,'addGroup']);
 Route::get('/add-users',[GroupController::class,'addUser']);
+Route::get('/groupsbyuser/{id}',[GroupController::class,'getAllRolesByUser']);
+Route::get('/userbygroup/{id}',[GroupController::class,'getAllUsersByRoles']);

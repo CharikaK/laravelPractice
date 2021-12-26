@@ -25,8 +25,8 @@ class GroupController extends Controller
     public function addUser()
     {
         $user = new User();
-        $user->name="johnson";
-        $user->email = 'johnson@email.com';
+        $user->name="john";
+        $user->email = 'jennjohnifer@email.com';
         $user->password = Hash::make('secret');
         $user->save();
 
@@ -36,4 +36,17 @@ class GroupController extends Controller
 
         return "Record has been created";
     }
+
+
+   public function getAllRolesByUser($id)
+   {
+       $user = User::find($id);
+       return $user->groups;
+   } 
+
+   public function getAllUsersByRoles($groupid)
+   {
+       $group = Group::find($groupid);
+       return $group->users;
+   }
 }
