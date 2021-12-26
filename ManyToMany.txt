@@ -2,7 +2,7 @@ Many to Many
 A User belongsToMany Groups
 A Group belongsToMany Users
 
-Many to many relationship needs a associative table
+Many to many relationship needs a associative table = pivot table
 
 users            Groups               group_users (associative)
 -------------   -------------       ---------------------
@@ -35,4 +35,15 @@ Refer GroupUser Model -  table name update
 Refer Group Model -  table name update and users()
 Refer User Model -  table name update and groups()
 
+----------------------------------------------------------------
+Make GroupController 
+php artisan make:controller GroupController
+
+Adding groups
+Adding a user and the group ids
+
+Many to many relationships use attach() to attach the related model
+
+Web
+Create Routes to addGroups and addUsers
 ----------------------------------------------------------------

@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Models\User; // another way of creating the fake users - Not recommended
 
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\GroupController;
 
 /*
 |--------------------------------------------------------------------------
@@ -44,3 +45,9 @@ Route::get('/phone',function(){
 // One to Many
 Route::get('/add-post',[PostController::class,'addPost']);
 Route::get('/add-comment/{id}',[PostController::class,'addComment']);
+Route::get('/getCommentsByPost/{id}',[PostController::class,'getCommentsByPost']);
+
+
+// many to many
+Route::get('/add-roles',[GroupController::class,'addGroup']);
+Route::get('/add-users',[GroupController::class,'addUser']);
