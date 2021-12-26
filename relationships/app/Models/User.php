@@ -47,4 +47,10 @@ class User extends Authenticatable
     public function phone(){
         return $this->hasOne(Phone::class,'user_id','id');
     }
+
+    // many to many
+    public function groups()
+    {
+        return $this->belongsToMany(Group::Class,'group_user');
+    }
 }

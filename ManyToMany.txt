@@ -28,3 +28,11 @@ Create GroupUser Model and migration
 php artisan make:model GroupUser -m
 
 Add columns in Groupusers migration
+
+----------------------------------------------------------------
+relationships
+Refer GroupUser Model -  table name update
+Refer Group Model -  table name update and users()
+Refer User Model -  table name update and groups()
+
+----------------------------------------------------------------
